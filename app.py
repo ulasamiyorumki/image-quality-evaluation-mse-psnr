@@ -319,8 +319,8 @@ with mse_column:
 the pixels of the original and the processed image:
             """
         )
-        st.latex(r"\text{MSE} = \frac{1}{M \cdot N \cdot C} \sum_{c=1}^{C} \sum_{i=1}^{M} \sum_{j=1}^{N} \left( I(i, j, c) - K(i, j, c) \right)^2")
-        st.markdown(
+    st.latex(r"\text{MSE} = \frac{1}{M \cdot N \cdot C}"r"\sum_{c=1}^{C}\sum_{i=1}^{M}\sum_{j=1}^{N}"r"\left(I(i,j,c)-K(i,j,c)\right)^2")        
+    st.markdown(
             """
 - $I$: original image, $K$: processed image
 - $M \\times N$: image height and width in pixels

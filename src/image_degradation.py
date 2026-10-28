@@ -6,20 +6,16 @@
 import cv2
 import numpy as np
 
-def add_gaussian_noise(image, mean=0, sigma=20):
+def add_gaussian_noise(image, mean=0, sigma=20, seed=42):
     """Add Gaussian noise to an image."""
 
+    rng = np.random.default_rng(seed)
     image_float = image.astype(np.float32)
 
-    noise = np.random.normal(
-        mean,
-        sigma,
-        image.shape,
-    )
-
+    noise = rng.normal(mean, sigma, image.shape)
     noisy_image = image_float + noise
     noisy_image = np.clip(noisy_image, 0, 255)
-
+    
     return noisy_image.astype(np.uint8)
 
 
