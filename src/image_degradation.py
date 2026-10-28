@@ -16,7 +16,7 @@ def add_gaussian_noise(image, mean=0, sigma=20, seed=42):
     noisy_image = image_float + noise
     noisy_image = np.clip(noisy_image, 0, 255)
     
-    return noisy_image.astype(np.uint8)
+    return np.rint(noisy_image).astype(np.uint8)
 
 
 def apply_gaussian_blur(image, kernel_size=5, sigma=1.0):
