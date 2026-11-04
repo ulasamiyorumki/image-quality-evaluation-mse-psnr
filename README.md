@@ -41,10 +41,6 @@ The Streamlit dashboard allows users to:
 - View MSE and PSNR values.
 - Review experiment results and charts that update based on the selected image and settings.
 
-The dashboard uses built-in sample images only. **User image upload is not part of the current project scope.**
-
-Results are displayed dynamically in the application. **CSV export is not part of the current project scope.** The evaluation module collects experiment results in a Pandas DataFrame for the dashboard to display.
-
 ## Project Structure
 
 ```text
