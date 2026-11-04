@@ -255,10 +255,10 @@ with st.expander(
 
         st.markdown(
             r"""
-            - \(I(x,y)\): original pixel value.
-            - \(n(x,y)\): random noise value.
-            - \(\mu\): mean of the added noise.
-            - \(\sigma\): standard deviation controlling noise intensity.
+            - $I(x,y)$: original pixel value.
+            - $n(x,y)$: random noise value.
+            - $\mu$: mean of the added noise.
+            - $\sigma$: standard deviation controlling noise intensity.
 
             Pixel values are clipped to the valid 0–255 range.
             With random noise, results may change between runs unless
@@ -291,11 +291,11 @@ with st.expander(
         st.markdown(
             r"""
             - **Kernel Size:** dimensions of the filtering window,
-              \(k\times k\) pixels.
-            - **Blur Sigma (\(\sigma\)):** controls the spread of the
+              $k\times k$ pixels.
+            - **Blur Sigma ($\sigma$):** controls the spread of the
               Gaussian weights.
 
-            These parameters work together. When sigma is small,
+            These parameters work together. When $\sigma$ is small,
             increasing kernel size may have little visible effect.
             """
         )
@@ -317,8 +317,8 @@ with st.expander(
 
         st.markdown(
             r"""
-            - \(F(u,v)\): DCT coefficient representing frequency content.
-            - \(Q(u,v)\): quantization step.
+            - $F(u,v)$: DCT coefficient representing frequency content.
+            - $Q(u,v)$: quantization step.
 
             Lower JPEG quality generally means stronger quantization,
             more lost detail, and more visible compression artifacts.
@@ -358,10 +358,10 @@ with mse_column:
 
         st.markdown(
             r"""
-            - \(I\): original image.
-            - \(K\): processed image.
-            - \(M\), \(N\): image height and width.
-            - \(C\): number of color channels (3 for RGB images).
+            - $I$: original image.
+            - $K$: processed image.
+            - $M$, $N$: image height and width.
+            - $C$: number of color channels (3 for RGB images).
 
             **How to interpret MSE:**
 
@@ -370,7 +370,7 @@ with mse_column:
             - **Higher MSE:** larger average pixel differences.
 
             Squaring gives larger errors more influence on the result.
-            For 8-bit images, the maximum possible MSE is \(255^2=65025\).
+            For 8-bit images, the maximum possible MSE is $255^2=65025$.
             """
         )
 
